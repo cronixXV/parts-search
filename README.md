@@ -49,6 +49,12 @@ API работает по `http` и не отдаёт CORS-заголовки, �
 
 Прокси настроен в `vite.config.js` для `dev` и `preview`. Для production нужен такой же прокси на стороне веб-сервера, например в nginx:
 
+```nginx
+location /api/ {
+    proxy_pass http://api.favorit-parts.ru/;
+}
+```
+
 ## 🧱 Архитектура (FSD)
 
 ```
